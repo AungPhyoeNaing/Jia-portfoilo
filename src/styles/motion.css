@@ -1,0 +1,25 @@
+@keyframes settle-type {
+  0% { transform: translateY(15%); clip-path: inset(-12% -14% 27%); }
+  100% { transform: translateY(0); clip-path: inset(-21% -14% -35%); }
+}
+@keyframes settle-light {
+  0% { opacity: .72; }
+  100% { opacity: 1; }
+}
+@keyframes open-menu {
+  from { opacity: 0; transform: translateY(-7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-intro .hero-line > * { animation: settle-type .74s var(--ease-out) both; }
+  .hero-intro .hero-line:nth-child(2) > * { animation-delay: .09s; }
+  .hero-intro .hero-art { animation: settle-light .95s var(--ease-out) both; }
+  .mobile-nav { animation: open-menu .24s var(--ease-out) both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
