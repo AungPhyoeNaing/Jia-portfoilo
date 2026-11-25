@@ -22,13 +22,14 @@ export function ContactActions({ email }: { email: string }) {
 
   return (
     <div className="contact-controls">
-      <a href={`mailto:${email}`} className="button button-primary">Email Jia<ArrowUpRight size={17} /></a>
+      <a href={`mailto:${email}`} className="button button-primary contact-email">
+        <span>{email}</span><ArrowUpRight size={17} />
+      </a>
       <button type="button" className="button button-secondary" onClick={copy}>
         {status === 'copied' ? <Check size={16} /> : <Copy size={16} />}
         {status === 'copied' ? 'Copied' : 'Copy email'}
       </button>
-      <span className="contact-address">{email}</span>
-      <span role="status" className="sr-only">{status === 'copied' ? 'Email copied' : status === 'failed' ? 'Copy unavailable. The email address is visible beside the button.' : ''}</span>
+      <span role="status" className="sr-only">{status === 'copied' ? 'Email copied' : status === 'failed' ? 'Copy unavailable. Select the email address to copy it.' : ''}</span>
       {status === 'failed' && <span aria-hidden="true" className="contact-address">Clipboard unavailable</span>}
     </div>
   );

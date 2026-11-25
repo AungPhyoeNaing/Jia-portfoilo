@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowDownRight, Minus, Plus } from 'lucide-react';
+import { Minus, Plus } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { process } from '@/data/profile';
 
@@ -37,10 +37,7 @@ export function Process() {
             </button>
           </h3>
           <div id={`step-content-${index}`} hidden={open !== index} className="process-details">
-            {open === index && <div ref={panel}>
-              <p>{step.description}</p>
-              <p className="process-artifact"><ArrowDownRight size={14} />{step.artifact}</p>
-            </div>}
+            {open === index && <div ref={panel}><p>{step.description}</p></div>}
           </div>
         </li>
       ))}

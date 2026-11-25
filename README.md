@@ -44,7 +44,7 @@ npm start
 | --- | --- |
 | `src/data/profile.ts` | Name, professional title, introduction, biography, process, photo, team award, email, availability, résumé, and the optional Lenis setting |
 | `src/data/projects.ts` | Project order, labels, role, technologies, artwork, case study sections, and optional live demo and source URLs |
-| `src/data/skills.ts` | Confirmed capabilities and optional tools |
+| `src/data/skills.ts` | Skills and tools displayed on the homepage |
 | `src/data/socials.ts` | Social profiles |
 | `src/lib/site.ts` | Site title, description, and structured data |
 | `src/styles/` | Semantic tokens, glass variants, homepage composition, case study layouts, and motion |

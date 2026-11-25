@@ -2,8 +2,7 @@ type Profile = {
   name: string;
   title: string;
   introduction: string;
-  biography: string[];
-  philosophy: string;
+  biography: string;
   email?: string;
   availability?: string;
   portrait?: { src: string; alt: string };
@@ -15,15 +14,12 @@ type Profile = {
 export const profile: Profile = {
   name: 'Jia',
   title: 'Independent frontend designer',
-  introduction: 'Hi, I’m Jia. I design and build websites, and I like figuring out how small details can make them feel more personal.',
-  biography: [
-    'I enjoy working with type, color, and motion. Sometimes it’s as simple as finding a better line break or giving a button a little more room.',
-    'I like building what I design because things can feel different once you can scroll, resize the screen, or use a keyboard. That’s usually when I find the next thing to fix.',
-  ],
-  philosophy: 'Technology should feel human. Design should feel alive.',
+  introduction: 'I’m Jia. I design and build websites with a focus on layout, color, and interaction.',
+  biography: 'I enjoy working with type, color, and motion. I test my designs in the browser to see how they feel on different screens and with a keyboard.',
+  email: 'hsuthirinaing.it@gmail.com',
   portrait: {
-    src: '/images/jia-portrait.webp',
-    alt: 'Jia in a blue dress, resting her chin on her hand in front of red flowers and green leaves',
+    src: '/images/jia-portrait-archway.webp',
+    alt: 'Jia wearing glasses and a light beige top, seated in a white stone archway',
   },
   award: {
     title: 'First prize at Project Show 2026',
@@ -39,22 +35,18 @@ export const profile: Profile = {
 export const process = [
   {
     name: 'Discover',
-    description: 'I start by asking who the site is for and what they need from it. Then I collect references and pick a direction to try.',
-    artifact: 'Notes and references',
+    description: 'I ask who the site is for, what they need, and what references fit.',
   },
   {
     name: 'Design',
-    description: 'I try out layouts, fonts, and colors on a few key screens. If an interaction matters, I make a quick prototype to see how it feels.',
-    artifact: 'Screen drafts and a quick prototype',
+    description: 'I try a few layouts and prototype the interactions that matter.',
   },
   {
     name: 'Develop',
-    description: 'I build the screens and check how they work in the browser, including on a phone and with a keyboard.',
-    artifact: 'Working pages and shared components',
+    description: 'I build the screens and check how they adapt to different devices.',
   },
   {
     name: 'Refine',
-    description: 'I go through the site again to catch things like cramped text, unclear buttons, or an animation that takes too long.',
-    artifact: 'Final device and accessibility checks',
+    description: 'I fix cramped text, unclear buttons, and awkward keyboard interactions.',
   },
 ];

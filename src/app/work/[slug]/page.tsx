@@ -49,7 +49,7 @@ export default async function CaseStudy({ params }: ProjectPage) {
             <p className="section-index mono"><i /> {label} / {project.concept ? 'Concept study' : 'Case study'} / {project.year}</p>
             <h1 className={project.name.length >= 10 ? 'case-title-long' : undefined}>{project.name}<em>.</em></h1>
           </div>
-          <div className="case-lead"><p className="case-tagline">{project.tagline}</p><p>{project.overview}</p></div>
+          <p className="case-lead">{project.overview}</p>
           {study.layout === 'split' && <div className="case-split-art"><ProjectCover project={project} detail /></div>}
         </header>
         {study.layout === 'wide' && <div className="case-wide-art"><ProjectCover project={project} detail /></div>}
@@ -65,31 +65,17 @@ export default async function CaseStudy({ params }: ProjectPage) {
         </div>}
 
         <section className="case-section">
-          <h2>The <em>idea.</em></h2>
+          <h2>Design <em>choices.</em></h2>
           <div className="case-prose">
-            <div><h3>Goal</h3><p>{study.objectives}</p></div>
-            <div><h3>The challenge</h3><p>{study.problem}</p></div>
-            <div><h3>Layout choices</h3><p>{study.exploration}</p></div>
-          </div>
-        </section>
-        <section className="case-section">
-          <h2>Look and <em>feel.</em></h2>
-          <div className="case-prose">
-            <div><h3>Color palette</h3><p>{study.identity}</p></div>
-            <ul className="case-palette">{study.palette.map((color) => (
+            <p>{study.design}</p>
+            <ul className="case-palette" aria-label="Project colors">{study.palette.map((color) => (
               <li key={color.hex}><div style={{ background: color.hex }} /><span>{color.name}</span><code>{color.hex}</code></li>
             ))}</ul>
-            <div><h3>Fonts</h3><p>{study.typography}</p></div>
           </div>
         </section>
         <section className="case-section">
           <h2>The <em>build.</em></h2>
-          <div className="case-prose">
-            <div><h3>What’s in the preview</h3><p>{study.interface}</p></div>
-            <div><h3>On smaller screens</h3><p>{study.responsive}</p></div>
-            <div><h3>How I built it</h3><p>{study.implementation}</p></div>
-            <div><h3>What I learned</h3><p>{study.lessons}</p></div>
-          </div>
+          <p className="case-prose">{study.build}</p>
         </section>
         <Link className="case-next" href={`/work/${next.slug}`}>
           <span className="section-index mono"><i /> Next case study</span>

@@ -18,7 +18,6 @@
 .case-header h1.case-title-long { font-size: clamp(65px, 10.8vw, 156px); line-height: .85; }
 .case-header h1 em { font-weight: 400; }
 .case-lead { color: var(--muted); max-width: 44ch; }
-.case-tagline { color: var(--ink); font: italic 500 clamp(28px, 3.3vw, 48px)/1 var(--display); margin-bottom: 13px; }
 .case-wide-art, .case-split-art { overflow: clip; border-radius: 5px; }
 .case-wide-art .project-art, .exhibit .project-art { aspect-ratio: 2.02; }
 .case-wide-art .aura-ui { width: 69%; }
@@ -39,9 +38,8 @@
   margin-block: clamp(60px, 10vw, 125px); border-top: 1px solid var(--line); padding-top: 32px;
 }
 .case-section h2 { font: 500 clamp(55px, 7.5vw, 108px)/.82 var(--display); letter-spacing: -.055em; }
-.case-prose { color: var(--muted); }
+.case-prose { color: var(--muted); max-width: 55ch; }
 .case-prose > * + * { margin-top: 25px; }
-.case-prose h3 { color: var(--ink); font-weight: 800; margin-bottom: 5px; }
 .case-palette { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .case-palette li { list-style: none; display: flex; flex-direction: column; font-size: 13px; }
 .case-palette li div { height: clamp(55px, 8vw, 115px); margin-bottom: 7px; border: 1px solid var(--line); }
