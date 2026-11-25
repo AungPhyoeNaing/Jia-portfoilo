@@ -112,15 +112,22 @@
 .exhibit-1 .exhibit-meta { grid-column: 3; justify-content: end; }
 
 .about { background: var(--surface-soft); padding-block: var(--space-section); }
-.about-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.1fr); align-items: center; gap: clamp(40px, 9vw, 139px); }
-.about-figure { margin: 0; }
+.about-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.1fr); align-items: start; gap: clamp(40px, 9vw, 139px); }
+.about-figure { margin: clamp(0px, 2.5vw, 36px) 0 0; }
 .about-image { position: relative; aspect-ratio: .88; background: var(--surface-tinted); border-radius: 48% 48% 5px 5px / 39% 39% 5px 5px; overflow: clip; }
 .about-image img { object-fit: cover; }
+.about-portrait img { object-position: 46% center; }
 .about-signature { position: absolute; bottom: 25px; right: 8%; width: 100px; height: auto; color: var(--midnight); filter: drop-shadow(0 1px 3px #ffffffe0); }
 .about-figure figcaption { display: flex; justify-content: space-between; gap: 15px; margin-top: 14px; color: var(--muted); font-size: 10px; }
 .about-copy .display-title { max-width: 11ch; font-size: clamp(60px, 7vw, 106px); margin-bottom: 34px; }
 .about-copy .body-copy + .body-copy { margin-top: 16px; }
 .about-philosophy { margin-top: 25px; font: italic 500 clamp(24px, 3.1vw, 40px)/1.13 var(--display); color: var(--accent); }
+.about-award { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; max-width: 55ch; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.about-award svg { margin-top: 2px; color: var(--accent); }
+.about-award h3 { color: var(--ink); font-size: 15px; font-weight: 800; line-height: 1.4; }
+.about-award p { margin-top: 4px; color: var(--muted); font-size: 14px; }
+.about-award-photo { display: block; position: relative; max-width: 410px; aspect-ratio: 1.82; margin-top: 15px; overflow: clip; border-radius: 5px; background: var(--surface-tinted); }
+.about-award-photo img { object-fit: cover; object-position: center 60%; }
 .about-copy .button { margin-top: 25px; }
 
 .toolkit {
@@ -225,7 +232,7 @@
   .exhibit-1 .exhibit-meta { grid-column: 2; justify-content: start; }
   .about-grid { display: flex; flex-direction: column-reverse; align-items: stretch; gap: 35px; }
   .about-copy .display-title { font-size: clamp(51px, 11vw, 82px); margin-bottom: 26px; }
-  .about-figure { width: min(90%, 480px); }
+  .about-figure { width: min(90%, 480px); margin-top: 0; }
   .toolkit, .process-grid { grid-template-columns: minmax(0, 1fr); }
   .process-grid { gap: 34px; }
   .process-heading .display-title { font-size: clamp(49px, 11vw, 79px); }

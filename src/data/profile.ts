@@ -7,6 +7,7 @@ type Profile = {
   email?: string;
   availability?: string;
   portrait?: { src: string; alt: string };
+  award?: { title: string; credit: string; photo?: { src: string; alt: string } };
   resume?: string;
   smoothScroll: boolean;
 };
@@ -20,6 +21,18 @@ export const profile: Profile = {
     'I like building what I design because things can feel different once you can scroll, resize the screen, or use a keyboard. That’s usually when I find the next thing to fix.',
   ],
   philosophy: 'Technology should feel human. Design should feel alive.',
+  portrait: {
+    src: '/images/jia-portrait.webp',
+    alt: 'Jia in a blue dress, resting her chin on her hand in front of red flowers and green leaves',
+  },
+  award: {
+    title: 'First prize at Project Show 2026',
+    credit: 'I was the main frontend designer on the winning team at Technological University (Mandalay).',
+    photo: {
+      src: '/images/project-show-first-prize.webp',
+      alt: 'First Prize sign for Project Show 2026 at Technological University (Mandalay)',
+    },
+  },
   smoothScroll: false,
 };
 

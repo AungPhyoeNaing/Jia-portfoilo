@@ -42,7 +42,7 @@ npm start
 
 | File | Content |
 | --- | --- |
-| `src/data/profile.ts` | Name, professional title, introduction, biography, process, photo, email, availability, résumé, and the optional Lenis setting |
+| `src/data/profile.ts` | Name, professional title, introduction, biography, process, photo, team award, email, availability, résumé, and the optional Lenis setting |
 | `src/data/projects.ts` | Project order, labels, role, technologies, artwork, case study sections, and optional live demo and source URLs |
 | `src/data/skills.ts` | Confirmed capabilities and optional tools |
 | `src/data/socials.ts` | Social profiles |
@@ -53,7 +53,7 @@ npm start
 - Add Jia’s real email to enable both the mailto link and clipboard action. Optional socials, availability, résumé, demo links, and source links render only when populated.
 - Edit the text, cover image, date, and palette in the same project record. Each project’s `slug` creates its URL under `/work/`. The `wide` and `split` layouts change the opening composition. Use `concept: true` to label an added project as a concept study.
 - Write case studies from Jia’s perspective as a frontend designer. Focus on the layout, interactions, and how the interface works across screen sizes.
-- Review the editable first-person biography with Jia before publishing. The fern-and-glass still life is the default portrait placeholder.
+- Review the editable first-person biography with Jia before publishing. The fern-and-glass still life appears when a portrait is unavailable.
 
 ## How the experience works
 

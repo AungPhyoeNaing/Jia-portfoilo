@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDown, ArrowDownRight, ArrowUp, ArrowUpRight, Download, Sparkle } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, ArrowUp, ArrowUpRight, Download, Sparkle, Trophy } from 'lucide-react';
 import { ContactActions } from '@/components/contact-actions';
 import { HomeMotion } from '@/components/home-motion';
 import { Process } from '@/components/process';
@@ -93,9 +93,9 @@ export default function Home() {
         <section className="about" id="about" tabIndex={-1} aria-labelledby="about-title">
           <div className="container about-grid">
             <figure className="about-figure">
-              <div className="about-image">
+              <div className={profile.portrait ? 'about-image about-portrait' : 'about-image'}>
                 <Image src={profile.portrait?.src ?? '/images/material-study.webp'} alt={profile.portrait?.alt ?? 'Fern fronds refracted through curved, ribbed green glass'} fill sizes="(max-width: 760px) 90vw, 500px" />
-                <Wordmark className="about-signature" />
+                {!profile.portrait && <Wordmark className="about-signature" />}
               </div>
               <figcaption className="mono"><span>{profile.portrait ? 'PORTRAIT' : 'FIG. 02'}</span>{profile.portrait ? profile.name : 'Botanical glass study'}</figcaption>
             </figure>
@@ -103,6 +103,21 @@ export default function Home() {
               <p className="section-index mono"><i /> About Jia</p>
               <h2 className="display-title" id="about-title">The person<br />behind the <em>pixels.</em></h2>
               {profile.biography.map((paragraph) => <p key={paragraph} className="body-copy">{paragraph}</p>)}
+              {profile.award && (
+                <div className="about-award">
+                  <Trophy size={20} aria-hidden="true" />
+                  <div>
+                    <h3>{profile.award.title}</h3>
+                    <p>{profile.award.credit}</p>
+                    {profile.award.photo && (
+                      <a className="about-award-photo" href={profile.award.photo.src} target="_blank" rel="noopener noreferrer"
+                        aria-label="View full first-prize photo (opens in a new tab)">
+                        <Image src={profile.award.photo.src} alt={profile.award.photo.alt} fill sizes="(max-width: 540px) 80vw, 410px" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
               <p className="about-philosophy">{profile.philosophy}</p>
               {profile.resume && <a className="button button-secondary" href={profile.resume} download>Download résumé <Download size={17} /></a>}
             </div>
