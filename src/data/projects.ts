@@ -64,7 +64,7 @@ export const projects: Project[] = [
     overview: 'Trends of TUM is a social app for campus posts and conversations. My focus was the frontend, including how people browse the feed, switch topics, and move between posts, profiles, and chat.',
     role: 'Frontend designer',
     technologies: ['React', 'Vite', 'Tailwind CSS', 'Socket.IO Client'],
-    artwork: { image: { src: '/images/trends-of-tum.webp', alt: 'Trends of TUM desktop feed with blue-tinted panels, campus posts, and people suggestions' } },
+    artwork: { image: { src: '/images/trends-of-tum.webp', alt: 'Trends of TUM desktop feed with a glass welcome banner, an open post category picker, and the Trendmates sidebar' } },
     caseStudy: {
       layout: 'wide',
       objectives: 'I wanted students to be able to scan the latest posts, find a topic, and join a conversation without losing their place in the feed.',
